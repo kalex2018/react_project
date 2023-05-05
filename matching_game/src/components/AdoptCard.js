@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 import { catFilter } from '../redux/reducers';
 import { useDispatch } from 'react-redux';
 import { setBreed } from '../redux/actions';
-import { cast } from 'sequelize';
 
 export default function AdoptCard() {
     const dispatch = useDispatch()

@@ -1,0 +1,46 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap');
+
+#navbar {
+    background-color: #011823;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-family: Lexend, sans-serif;
+}
+
+#navbar div {
+    margin: 15px;
+} */
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #011823;
+    color: white;
+    padding: 5px;
+  }
+  
+  #navbar a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  #navbar a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  #navbar a.active {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #navbar a.active:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+  #navbar div {
+    margin: 15px;
+  }

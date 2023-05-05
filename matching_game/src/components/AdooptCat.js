@@ -20,7 +20,7 @@ export default function AdooptCat() {
             <SearchCats />
 
             <Grid>
-                {cats.map((cat) => (
+                {cats?.map((cat) => (
                     <Grid.Col md={2} lg={4}  >
                         <AdoptCard cat={cat} />
                     </Grid.Col>

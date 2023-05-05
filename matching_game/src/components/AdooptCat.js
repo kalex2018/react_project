@@ -20,8 +20,9 @@ export default function AdooptCat() {
             <SearchCats />
 
             <Grid>
+                {/* The map function is being excuted only if cats is defined */}
                 {cats?.map((cat) => (
-                    <Grid.Col md={2} lg={4}  >
+                    <Grid.Col span={4}  >
                         <AdoptCard cat={cat} />
                     </Grid.Col>
                 ))

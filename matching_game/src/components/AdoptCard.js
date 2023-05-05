@@ -4,15 +4,17 @@ import { useSelector } from 'react-redux';
 import { catFilter } from '../redux/reducers';
 import { useDispatch } from 'react-redux';
 import { setBreed } from '../redux/actions';
+import { setFavorite } from '../redux/actions';
 
 export default function AdoptCard({ cat }) {
     const dispatch = useDispatch()
     const catCard = useSelector((state) => {
         return state.catFilter.breed
     })
-    const adoptCat = useSelector((state) => {
-        return state.catFilter
+    const favoritCat = useSelector((state) => {
+        return state.catFilter.favorit
     })
+    const image = ``
     console.log('in the cat card', catCard)
 
 
@@ -23,15 +25,15 @@ export default function AdoptCard({ cat }) {
                 <Card shadow="sm" padding="lg" radius="md" withBorder>
                     <Card.Section>
                         <Image
-                            src=""
+                            src={cat.reference_image_id}
                             height={160}
-                            alt="Norway"
+                            alt={cat.name}
                         />
                     </Card.Section>
 
                     <Group position="apart" mt="md" mb="xs">
                         <Text weight={500}>
-                            {cat.name}
+
                         </Text>
                         <Badge color="pink" variant="light">
                             {cat.origin}
@@ -42,8 +44,8 @@ export default function AdoptCard({ cat }) {
                         {cat.description}
                     </Text>
 
-                    <Button variant="light" color="blue" fullWidth mt="md" radius="md">
-                        Book classic tour now
+                    <Button onClick={() => { dispatch(setFavorite(cat)) }} variant="light" color="blue" fullWidth mt="md" radius="md">
+                        favorit
                     </Button>
                 </Card>
 

@@ -14,11 +14,11 @@ export default function SearchCats() {
             fetch("https://api.thecatapi.com/v1/breeds")
                 .then(response => response.json())
                 .then(data => {
-                    let cats = {
-                        cat: data
-                    }
+                    let cats = data
+
                     dispatch(setBreed(cats))
-                    console.log(cats)
+                    console.log('in the cat serach', cats.cat)
+
                     return cats
 
                 })
@@ -26,8 +26,9 @@ export default function SearchCats() {
             console.log(error)
         }
     }
+
     return (
-        <button onClick={catBreed}>Find a Cat</button>
+        <button onClick={(event) => catBreed(event)}>Find a Cat</button>
 
     )
 }

@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom';
 import Template from './Template'
 import AdooptCat from './AdooptCat';
+import SearchCats from './SearchCats';
 
 export default function App() {
   return (
@@ -19,7 +20,7 @@ export default function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/matching" element={<Matching />} />
           <Route exact path="/cat" element={<Cat />} />
-
+          <Route exact path="/adopt" element={<AdooptCat />} />
         </Routes>
       </Template>
     </Router>

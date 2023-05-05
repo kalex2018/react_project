@@ -10,21 +10,24 @@ import SearchCats from './SearchCats'
 export default function AdooptCat() {
     const dispatch = useDispatch()
     const cats = useSelector((state) => {
-        return state.catFilter.breed
+        return state.catFilter.breed[0]
     })
+    console.log('in the AdoptCat Container', cats)
 
     return (
         <>
-            <div>AdooptCat</div>
+            <div>AdoptCat</div>
             <SearchCats />
+
             <Grid>
                 {cats.map((cat) => (
-                    <Grid.Col md={2} lg={4} >
-                        <AdoptCard cat={cats} />
+                    <Grid.Col md={2} lg={4}  >
+                        <AdoptCard cat={cat} />
                     </Grid.Col>
                 ))
                 }
             </Grid>
+
 
 
         </>

@@ -5,7 +5,7 @@ import { catFilter } from '../redux/reducers';
 import { useDispatch } from 'react-redux';
 import { setBreed } from '../redux/actions';
 
-export default function AdoptCard() {
+export default function AdoptCard({ cat }) {
     const dispatch = useDispatch()
     const catCard = useSelector((state) => {
         return state.catFilter.breed
@@ -13,11 +13,13 @@ export default function AdoptCard() {
     const adoptCat = useSelector((state) => {
         return state.catFilter
     })
+    console.log('in the cat card', catCard)
 
 
     return (
         <div>
             <>
+
                 <Card shadow="sm" padding="lg" radius="md" withBorder>
                     <Card.Section>
                         <Image
@@ -28,15 +30,16 @@ export default function AdoptCard() {
                     </Card.Section>
 
                     <Group position="apart" mt="md" mb="xs">
-                        <Text weight={500}></Text>
+                        <Text weight={500}>
+                            {cat.name}
+                        </Text>
                         <Badge color="pink" variant="light">
-                            On Sale
+                            {cat.origin}
                         </Badge>
                     </Group>
 
                     <Text size="sm" color="dimmed">
-                        With Fjord Tours you can explore more of the magical fjord landscapes with tours and
-                        activities on and around the fjords of Norway
+                        {cat.description}
                     </Text>
 
                     <Button variant="light" color="blue" fullWidth mt="md" radius="md">

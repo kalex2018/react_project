@@ -50,6 +50,10 @@ button:active {
 	transform: scale(0.99);
 }
 
+button:hover {
+	background-color: #873e88
+}
+
 .App {
 	margin-left: 25%;
 	margin-top: 5%;

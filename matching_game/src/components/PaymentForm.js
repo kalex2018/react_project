@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import axios from "axios"
-import { Checkbox, Container, Input, Radio, Group } from '@mantine/core'
+import { Checkbox, Container, Input, Radio, Group, Text } from '@mantine/core'
+import '../css/paymentForm.css'
 
 
 const CARD_OPTIONS = {
@@ -69,10 +70,11 @@ export default function PaymentForm() {
         <Radio.Group
          value={price}
          onChange={setPrice}
-         name="DonationAmount"
-         label="Select your desired donation amount"
+        //  name="DonationAmount"
+        //  label="Select your desired donation amount"
          >
-        <Group mt="xs">
+        <Text>Choose a donation amount!</Text>
+        <Group mt="xs" id="radioGroup">
             <Radio value="5" label="Donate $5" />
             <Radio value="10" label="Donate $10" />
             <Radio value="20" label="Donate $20" />

@@ -5,6 +5,7 @@ import { catFilter } from '../redux/reducers';
 import { useDispatch } from 'react-redux';
 import { setBreed } from '../redux/actions';
 import { setFavorite } from '../redux/actions';
+import { FaRegHeart } from 'react-icons/fa'
 
 export default function AdoptCard({ cat }) {
     const dispatch = useDispatch()
@@ -22,7 +23,7 @@ export default function AdoptCard({ cat }) {
         <div>
             <>
 
-                <Card shadow="sm" padding="lg" radius="md" withBorder>
+                <Card shadow="sm" padding="lg" radius="md" withBorder >
 
                     <Group position="apart" mt="md" mb="xs">
                         <Text weight={500}>
@@ -38,7 +39,7 @@ export default function AdoptCard({ cat }) {
                     </Text>
 
                     <Button onClick={() => { dispatch(setFavorite(cat)) }} variant="light" color="blue" fullWidth mt="md" radius="md">
-                        favorite
+                        <FaRegHeart />
                     </Button>
                 </Card>
 

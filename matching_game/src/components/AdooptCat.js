@@ -7,12 +7,14 @@ import AdoptCard from './AdoptCard'
 import { Grid, Container } from '@mantine/core';
 import SearchCats from './SearchCats'
 
+// Not actually for Adopting a Cat, this was changed to just show Info about cats.
+
 export default function AdooptCat() {
     const dispatch = useDispatch()
     const cats = useSelector((state) => {
         return state.catFilter.breed[0]
     })
-    console.log('in the AdoptCat Container', cats)
+    // console.log('in the AdoptCat Container', cats)
 
     return (
         <>

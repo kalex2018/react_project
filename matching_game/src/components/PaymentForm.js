@@ -25,7 +25,7 @@ const CARD_OPTIONS = {
 	}
 }
 
-
+// Stripe payment form - added in extra styling and elements to allow user to choose donation amount.
 export default function PaymentForm() {
     const [success, setSuccess ] = useState(false)
     const [price, setPrice] = useState(5)
@@ -50,7 +50,7 @@ export default function PaymentForm() {
                 id
             })
 
-            if(response.data.success) {
+            if (response.data.success) {
                 console.log("Successful payment!")
                 setSuccess(true)
             }
@@ -92,11 +92,12 @@ export default function PaymentForm() {
     </Container>
     :
     <div>
-        <h2>Thank you for your donation!</h2>
+        <h2>Success! Thank you for your donation!</h2>
     </div>
     }
 
     </>
+    
 
   )
 

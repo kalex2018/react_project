@@ -22,7 +22,7 @@ export default function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/matching" element={<Matching />} />
           <Route exact path="/cat" element={<Cat />} />
-          <Route exact path="/adopt" element={<AdooptCat />} />
+          <Route exact path="/info" element={<AdooptCat />} />
           <Route exact path="/donate" element={<StripeContainer />} />
         </Routes>
       </Template>

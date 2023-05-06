@@ -16,7 +16,9 @@ export default function AdoptCard({ cat }) {
         return state.catFilter.favorit
     })
     const image = ``
-    console.log('in the cat card', catCard)
+    // console.log('in the cat card', catCard)
+
+    // Previously this was going to be cards of cats to adopt, but was changed to just be informational about each breed, with the option to add specific ones to a "Favorites" array.
 
 
     return (

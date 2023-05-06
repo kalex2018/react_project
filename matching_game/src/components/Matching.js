@@ -16,7 +16,7 @@ const cardPictures = [
 
 export default function Matching() {
   const [cards, setCards] = useState([])
-  const [turns, setTurns] = useState(0)
+  const [turns, setTurns] = useState(0) // Haven't added this part yet, the goal is to win the game in the least number of turns possible
   const [choiceOne, setChoiceOne] = useState(null)
   const [choiceTwo, setChoiceTwo] = useState(null)
   const [disabled, setDisabled] = useState(false)

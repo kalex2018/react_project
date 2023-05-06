@@ -2,6 +2,8 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { setBreed } from '../redux/actions'
+import '../css/SearchCats.css'
+import { Container } from '@mantine/core'
 
 export default function SearchCats() {
     const dispatch = useDispatch()
@@ -28,7 +30,8 @@ export default function SearchCats() {
     }
 
     return (
-        <button onClick={(event) => catBreed(event)}>Find a Cat</button>
-
+        <Container className="flex">
+        <button id="catInfo" onClick={(event) => catBreed(event)}>Get Cat Info!</button>
+        </Container>
     )
 }

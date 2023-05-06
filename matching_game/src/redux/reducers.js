@@ -1,7 +1,7 @@
 
 
 const initialState = {
-    cat: [],
+    // cat: [],
     favorite: [],
     breed: []
 }
@@ -14,11 +14,11 @@ export function catFilter(state = initialState, action) {
                 ...state,
                 favorite: [...state.favorite, action.payload]
             }
-        case 'SET_CAT':
-            return {
-                ...state,
-                cat: [...state.cat, action.payload]
-            }
+        // case 'SET_CAT':
+        //     return {
+        //         ...state,
+        //         cat: [...state.cat, action.payload]
+        //     }
         case 'SET_BREED':
             return {
                 ...state,

@@ -23,17 +23,10 @@ export default function AdoptCard({ cat }) {
             <>
 
                 <Card shadow="sm" padding="lg" radius="md" withBorder>
-                    <Card.Section>
-                        <Image
-                            src={cat.reference_image_id}
-                            height={160}
-                            alt={cat.name}
-                        />
-                    </Card.Section>
 
                     <Group position="apart" mt="md" mb="xs">
                         <Text weight={500}>
-
+                            {cat.name}
                         </Text>
                         <Badge color="pink" variant="light">
                             {cat.origin}
@@ -45,7 +38,7 @@ export default function AdoptCard({ cat }) {
                     </Text>
 
                     <Button onClick={() => { dispatch(setFavorite(cat)) }} variant="light" color="blue" fullWidth mt="md" radius="md">
-                        favorit
+                        favorite
                     </Button>
                 </Card>
 

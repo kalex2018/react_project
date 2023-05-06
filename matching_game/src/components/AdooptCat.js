@@ -4,7 +4,7 @@ import { setBreed } from '../redux/actions'
 import Provider from 'react-redux'
 import { catFilter } from '../redux/reducers'
 import AdoptCard from './AdoptCard'
-import { Grid } from '@mantine/core';
+import { Grid, Container } from '@mantine/core';
 import SearchCats from './SearchCats'
 
 export default function AdooptCat() {
@@ -16,19 +16,18 @@ export default function AdooptCat() {
 
     return (
         <>
-            <div>AdoptCat</div>
             <SearchCats />
-
+            <Container mt={30}>
             <Grid>
                 {/* The map function is being excuted only if cats is defined */}
                 {cats?.map((cat) => (
-                    <Grid.Col span={4}  >
+                    <Grid.Col span={6}  >
                         <AdoptCard cat={cat} />
                     </Grid.Col>
                 ))
                 }
             </Grid>
-
+            </Container>
 
 
         </>

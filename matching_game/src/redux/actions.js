@@ -4,12 +4,12 @@ export function setFavorite(favorite) {
         payload: favorite
     }
 }
-export function setCat(cat) {
-    return {
-        type: 'SET_CAT',
-        payload: cat
-    }
-}
+// export function setCat(cat) {
+//     return {
+//         type: 'SET_CAT',
+//         payload: cat
+//     }
+// }
 export function setBreed(breed) {
     return {
         type: 'SET_BREED',

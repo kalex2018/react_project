@@ -8,7 +8,8 @@ export default function Navbar() {
       <div><NavLink to="/">Home</NavLink></div>
       <div><NavLink to="/matching">Matching Game</NavLink></div>
       <div><NavLink to="/cat">Cat Pictures</NavLink></div>
-      <div><NavLink to="/adopt">Adopt</NavLink></div>
+      <div><NavLink to="/adopt">Cat Info</NavLink></div>
+      <div><NavLink to="/donate">Donate</NavLink></div>
 
     </div>
   )

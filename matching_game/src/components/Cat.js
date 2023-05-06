@@ -21,7 +21,7 @@ export default function Cat() {
     return (
         <div className="cat-container">
             <img className="cat-image" src={picture} alt="Picture Incoming" />
-            <button onClick={ catPicture }>Get a new cat picture!</button>
+            <button id="catPicture" onClick={ catPicture }>Get a new cat picture!</button>
         </div>
     )
 }

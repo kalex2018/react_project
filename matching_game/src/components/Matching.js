@@ -93,7 +93,7 @@ console.log(cards)
   return (
     <div className="Matching">
       <h1>Match It!</h1>
-      <button onClick={shuffleCards}>New Game</button>
+      <button id="newGame" onClick={shuffleCards}>New Game</button>
 
       <div className="card-grid">
         {cards.map(card => (

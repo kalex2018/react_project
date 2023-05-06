@@ -3,7 +3,7 @@
     margin: 40px auto;
   }
   
-  button {
+  #newGame {
     background: none;
     border: 2px solid white;
     padding: 6px 12px;
@@ -14,7 +14,7 @@
     font-size: 1em;
   }
   
-  button:hover {
+  #newGame:hover {
     background: #537be1;
     color: white;
   }
